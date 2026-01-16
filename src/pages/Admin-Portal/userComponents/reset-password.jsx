@@ -21,7 +21,7 @@ export default function ResetPassword() {
 
         try {
             await axios.post(
-                `https://meeting-scheduler-system-server.vercel.app/reset-password${token}`,
+                `https://meeting-scheduler-server-six.vercel.app/reset-password${token}`,
                 { password }
             );
 

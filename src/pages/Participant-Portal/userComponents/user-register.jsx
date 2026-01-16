@@ -24,7 +24,7 @@ function UserRegister() {
     async function submitHandler(e) {
         e.preventDefault();
         try {
-            const res = await axios.post("https://meeting-scheduler-system-server.vercel.app/register", user);
+            const res = await axios.post("https://meeting-scheduler-server-six.vercel.app/register", user);
             console.log(res);
             toast.success("User registered successfully");
             navigate("/user-dashboard");

@@ -20,7 +20,7 @@ function UserForget() {
         e.preventDefault();
         try {
             const res = await axios.post(
-                "https://meeting-scheduler-system-server.vercel.app/forget-password",
+                "https://meeting-scheduler-server-six.vercel.app/forget-password",
                 user
             );
             // console.log(res);

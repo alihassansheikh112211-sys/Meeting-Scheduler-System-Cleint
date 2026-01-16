@@ -14,7 +14,7 @@ function UPComing() {
     const [meetings, setMeetings] = useState([]);
     async function fectchMeeting() {
 
-        const res = await axios.get("https://meeting-scheduler-system-server.vercel.app/get-all-meeting");
+        const res = await axios.get("https://meeting-scheduler-server-six.vercel.app/get-all-meeting");
         // console.log(res.data);
         setMeetings(res.data.meeting);
     }

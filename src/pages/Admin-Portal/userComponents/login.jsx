@@ -24,7 +24,7 @@ function Login() {
   async function submitHandler(e) {
     e.preventDefault();
     try {
-      const res = await axios.post("https://meeting-scheduler-system-server.vercel.app/login", user);
+      const res = await axios.post("https://meeting-scheduler-server-six.vercel.app/login", user);
       console.log(res);
       toast.success("User logged in successfully");
       navigate("/Admin-dashboard");

@@ -9,7 +9,7 @@ function EditReport() {
     const navigate = useNavigate();
     // console.log(params.id);
     async function fetchReport() {
-        const report = await axios.get(`https://meeting-scheduler-system-server.vercel.app/get-single-report${params.id}`);
+        const report = await axios.get(`https://meeting-scheduler-server-six.vercel.app/get-single-report${params.id}`);
         // console.log(report.data);
         setReportData(report.data.report);
     }
@@ -27,7 +27,7 @@ function EditReport() {
         try {
 
             const res = await axios.patch(
-                `https://meeting-scheduler-system-server.vercel.app/update-report${params.id}`,
+                `https://meeting-scheduler-server-six.vercel.app/update-report${params.id}`,
                 reportData
             );
             // console.log(res);

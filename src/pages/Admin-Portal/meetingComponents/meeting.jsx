@@ -14,7 +14,7 @@ function Meeting() {
     // console.log("res", res);
     // const data = await res.json();
     // console.log("data", data);
-    const res = await axios.get("https://meeting-scheduler-system-server.vercel.app/get-all-meeting");
+    const res = await axios.get("https://meeting-scheduler-server-six.vercel.app/get-all-meeting");
     // console.log(res.data);
     setMeetings(res.data.meeting);
   }
@@ -24,7 +24,7 @@ function Meeting() {
   async function deleteMeeting(id) {
     try {
 
-      const meeting = await axios.delete(`https://meeting-scheduler-system-server.vercel.app/delete-meeting${id}`);
+      const meeting = await axios.delete(`https://meeting-scheduler-server-six.vercel.app/delete-meeting${id}`);
       const singleMeeting = meetings.filter(
         (meriMeeting) => meriMeeting._id !== id
       );

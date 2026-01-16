@@ -22,7 +22,7 @@ function CreateMeeting() {
   async function submitHandler(e) {
     e.preventDefault();
     try {
-      const res = await axios.post("https://meeting-scheduler-system-server.vercel.app/create-meeting", meeting);
+      const res = await axios.post("https://meeting-scheduler-server-six.vercel.app/create-meeting", meeting);
       // console.log(res)
       toast.success("Meeting created successfully");
       navigate("/meeting");

@@ -23,7 +23,7 @@ function User() {
     async function deleteUser(id) {
         try {
 
-            const User = await axios.delete(`https://meeting-scheduler-system-server.vercel.app/delete-user${id}`);
+            const User = await axios.delete(`https://meeting-scheduler-server-six.vercel.app/delete-user${id}`);
             const singleUser = users.filter(
                 (merayUser) => merayUser._id !== id
             );

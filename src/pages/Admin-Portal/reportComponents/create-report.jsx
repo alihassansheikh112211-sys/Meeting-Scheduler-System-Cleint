@@ -22,7 +22,7 @@ function CreateReport() {
         e.preventDefault();
 
         try {
-            const res = await axios.post("https://meeting-scheduler-system-server.vercel.app/create-report", report);
+            const res = await axios.post("https://meeting-scheduler-server-six.vercel.app/create-report", report);
 
             if (res.data) {
                 toast.success("Report created successfully");

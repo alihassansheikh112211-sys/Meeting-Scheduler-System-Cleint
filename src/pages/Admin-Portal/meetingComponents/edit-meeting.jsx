@@ -8,7 +8,7 @@ function EditMeeting() {
   const params = useParams();
   const navigate = useNavigate();
   async function fetchMeeting() {
-    const meeting = await axios.get(`https://meeting-scheduler-system-server.vercel.app/get-single-meeting${params.id}`);
+    const meeting = await axios.get(`https://meeting-scheduler-server-six.vercel.app/get-single-meeting${params.id}`);
     // console.log(meeting.data);
     setMeetingDate(meeting.data.meeting);
   }
@@ -26,7 +26,7 @@ function EditMeeting() {
     try {
 
       const res = await axios.patch(
-        `https://meeting-scheduler-system-server.vercel.app/update-meeting${params.id}`,
+        `https://meeting-scheduler-server-six.vercel.app/update-meeting${params.id}`,
         meetingData
       );
       // console.log(res);

@@ -11,7 +11,7 @@ function Report() {
     const navigate = useNavigate();
 
     async function fetchReport() {
-        const res = await axios.get("https://meeting-scheduler-system-server.vercel.app/get-all-report");
+        const res = await axios.get("https://meeting-scheduler-server-six.vercel.app/get-all-report");
         // console.log(res.data)
         setReports(res.data.report);
     }
@@ -22,7 +22,7 @@ function Report() {
 
     async function deleteReport(id) {
         try {
-            await axios.delete(`https://meeting-scheduler-system-server.vercel.app/delete-report${id}`);
+            await axios.delete(`https://meeting-scheduler-server-six.vercel.app/delete-report${id}`);
 
             setReports(prev => prev.filter(r => r._id !== id));
             toast.success("Report deleted successfully");
